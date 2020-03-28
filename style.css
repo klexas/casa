@@ -1,0 +1,146 @@
+body {
+  background: black;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+
+div {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  pointer-events: none;
+}
+
+.grid {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: calc(100% / 5);
+  height: calc(100% / 3);
+  pointer-events: auto;
+}
+.grid:nth-child(1) {
+  left: 0%;
+}
+.grid:nth-child(1):hover ~ .elem {
+  transform: rotateY(-40deg) rotateX(20deg);
+}
+.grid:nth-child(2) {
+  left: 20%;
+}
+.grid:nth-child(2):hover ~ .elem {
+  transform: rotateY(-20deg) rotateX(20deg);
+}
+.grid:nth-child(3) {
+  left: 40%;
+}
+.grid:nth-child(3):hover ~ .elem {
+  transform: rotateY(0deg) rotateX(20deg);
+}
+.grid:nth-child(4) {
+  left: 60%;
+}
+.grid:nth-child(4):hover ~ .elem {
+  transform: rotateY(20deg) rotateX(20deg);
+}
+.grid:nth-child(5) {
+  left: 80%;
+}
+.grid:nth-child(5):hover ~ .elem {
+  transform: rotateY(40deg) rotateX(20deg);
+}
+.grid:nth-child(6) {
+  left: 0%;
+}
+.grid:nth-child(6):hover ~ .elem {
+  transform: rotateY(-40deg) rotateX(0deg);
+}
+.grid:nth-child(7) {
+  left: 20%;
+}
+.grid:nth-child(7):hover ~ .elem {
+  transform: rotateY(-20deg) rotateX(0deg);
+}
+.grid:nth-child(8) {
+  left: 40%;
+}
+.grid:nth-child(8):hover ~ .elem {
+  transform: rotateY(0deg) rotateX(0deg);
+}
+.grid:nth-child(9) {
+  left: 60%;
+}
+.grid:nth-child(9):hover ~ .elem {
+  transform: rotateY(20deg) rotateX(0deg);
+}
+.grid:nth-child(10) {
+  left: 80%;
+}
+.grid:nth-child(10):hover ~ .elem {
+  transform: rotateY(40deg) rotateX(0deg);
+}
+.grid:nth-child(11) {
+  left: 0%;
+}
+.grid:nth-child(11):hover ~ .elem {
+  transform: rotateY(-40deg) rotateX(-20deg);
+}
+.grid:nth-child(12) {
+  left: 20%;
+}
+.grid:nth-child(12):hover ~ .elem {
+  transform: rotateY(-20deg) rotateX(-20deg);
+}
+.grid:nth-child(13) {
+  left: 40%;
+}
+.grid:nth-child(13):hover ~ .elem {
+  transform: rotateY(0deg) rotateX(-20deg);
+}
+.grid:nth-child(14) {
+  left: 60%;
+}
+.grid:nth-child(14):hover ~ .elem {
+  transform: rotateY(20deg) rotateX(-20deg);
+}
+.grid:nth-child(15) {
+  left: 80%;
+}
+.grid:nth-child(15):hover ~ .elem {
+  transform: rotateY(40deg) rotateX(-20deg);
+}
+
+.grid.top {
+  top: 0;
+}
+
+.grid.middle {
+  top: calc(100% / 3);
+}
+
+.grid.bottom {
+  top: calc((100% / 3) *2 );
+}
+
+.elem {
+  width: 13rem;
+  height: 13rem;
+  background: linear-gradient(grey 5%, white 90%);
+  transition: 1000ms cubic-bezier(0.17, 0.935, 0.305, 1.5);
+  transform: translateZ(200px);
+}
+
+#so_profile{
+  position:fixed;
+  z-index:20;
+  bottom: calc((10%) *2 );
+}
+
+
